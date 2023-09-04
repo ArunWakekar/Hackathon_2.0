@@ -1,0 +1,56 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_BackstopJS_Homepage_0_dropdown__number__password__submit_0_phone.png",
+        "test": "..\\bitmaps_test\\20230818-111744\\backstop_default_BackstopJS_Homepage_0_dropdown__number__password__submit_0_phone.png",
+        "selector": ".dropdown__.number__.password__.submit",
+        "fileName": "backstop_default_BackstopJS_Homepage_0_dropdown__number__password__submit_0_phone.png",
+        "label": "BackstopJS Homepage",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "https://drishti-dev.tatamotors.com/login",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "engineErrorMsg": "Cannot read properties of undefined (reading 'startsWith')",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_BackstopJS_Homepage_0_dropdown__number__password__submit_1_tablet.png",
+        "test": "..\\bitmaps_test\\20230818-111744\\backstop_default_BackstopJS_Homepage_0_dropdown__number__password__submit_1_tablet.png",
+        "selector": ".dropdown__.number__.password__.submit",
+        "fileName": "backstop_default_BackstopJS_Homepage_0_dropdown__number__password__submit_1_tablet.png",
+        "label": "BackstopJS Homepage",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "https://drishti-dev.tatamotors.com/login",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "engineErrorMsg": "Cannot read properties of undefined (reading 'startsWith')",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    }
+  ],
+  "id": "backstop_default"
+}
