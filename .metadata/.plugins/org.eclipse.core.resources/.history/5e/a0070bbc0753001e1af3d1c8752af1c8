@@ -1,0 +1,37 @@
+package test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.winium.DesktopOptions;
+import org.openqa.selenium.winium.WiniumDriver;
+
+public class NotepadAutomation {
+
+    public static void main(String[] args) throws Exception {
+        DesktopOptions option = new DesktopOptions();
+        option.setApplicationPath("path/to/Winium.Desktop.Driver.exe");
+        //WebDriver driver = new WiniumDriver(option);
+        
+        option.setApplicationPath("C:\\Windows\\system32\\notepad.exe"); // Path to Notepad
+
+        WebDriver driver = new WiniumDriver(option);
+
+        // Wait for Notepad to open
+        Thread.sleep(2000); 
+
+        // Type text in Notepad
+        WebElement notepadTextArea = driver.findElement(By.className("Edit"));
+        notepadTextArea.sendKeys("Arun Wakekar");
+
+        // Close Notepad
+        driver.findElement(By.name("File")).click();
+        driver.findElement(By.name("Exit")).click();
+
+        // Handle confirmation dialog (optional)
+        Thread.sleep(1000); 
+        driver.findElement(By.name("Don't Save")).click();
+
+        // Close the driver
+        driver.quit();
+    }
+}

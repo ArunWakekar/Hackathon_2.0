@@ -1,0 +1,19 @@
+package test;
+import java.net.MalformedURLException;
+import java.net.URL;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import io.appium.java_client.windows.WindowsDriver;
+public class NotepadAutomation {
+public static void main(String[] args) throws MalformedURLException{
+	
+	DesiredCapabilities capabilities = new DesiredCapabilities();
+	capabilities.setCapability("platformName", "Windows");
+	capabilities.setCapability("platformVersion", "10");
+    //capabilities.setCapability("app", "Microsoft.WindowsMaps_8wekyb3d8bbwe!App");
+	capabilities.setCapability("app","Disney.37853FC22B2CE_6rarf9sa4v8jt!App");
+	  WindowsDriver driver = new WindowsDriver(new URL("http://127.0.0.1:4723"), capabilities);
+	  driver.findElementByAccessibilityId("EmailContinueButton").click();
+	  driver.findElementByAccessibilityId("TextBox").sendKeys("arun.wakekar@gmail.com");
+	  //NotepadAutomation.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);    
+}
+}

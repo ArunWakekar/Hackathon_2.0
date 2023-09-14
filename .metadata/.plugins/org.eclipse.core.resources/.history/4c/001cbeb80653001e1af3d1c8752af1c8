@@ -1,0 +1,28 @@
+package test;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.winium.DesktopOptions;
+import org.openqa.selenium.winium.WiniumDriver;
+
+public class WiniumExample {
+
+    public static void main(String[] args) throws Exception {
+        DesktopOptions option = new DesktopOptions();
+        option.setApplicationPath("C:\\Windows\\System32\\calc.exe"); // Path to the Calculator executable
+
+        WebDriver driver = new WiniumDriver(option);
+
+        // Interact with the Calculator (Example: Add 2 + 3)
+        driver.findElementByAccessibilityId("num2Button").click();
+        driver.findElementByAccessibilityId("plusButton").click();
+        driver.findElementByAccessibilityId("num3Button").click();
+        driver.findElementByAccessibilityId("equalButton").click();
+
+        // Get the result
+        String result = driver.findElementByAccessibilityId("CalculatorResults").getAttribute("Name");
+        System.out.println("Result: " + result);
+
+        // Close the Calculator
+        driver.quit();
+    }
+}
