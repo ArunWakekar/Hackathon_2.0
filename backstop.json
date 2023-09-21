@@ -1,0 +1,105 @@
+{
+  "id": "Sankey_Portal",
+  "viewports": [
+    {
+      "label": "phone",
+      "width": 320,
+      "height": 480
+    },
+    {
+      "label": "tablet",
+      "width": 1024,
+      "height": 768
+    }
+  ,
+  {
+    "label":"Desktop",
+    "height":"1020",
+    "width":"720"
+  }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "Utils/customFunctions.js",
+  "scenarios": [
+    {
+      "label": "Emp LoginPage",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "https://employeeportal.sankeysolutions.com/",
+      "referenceUrl": "",
+      "onReadyScriptOptions": {
+        "enterUsername": "YourUsername",
+        "enterPassword": "YourPassword",
+        "clickLogin": true,
+        "isAuthenticated": true
+      },
+      "selectors": ["body"],
+      "readyEvent": "",
+      "readySelector": "",
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": 0,
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.2,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "DashboardPage",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "https://employeeportal.sankeysolutions.com/home",
+      "referenceUrl": "",
+      "selectors": ["body"],
+      "readyEvent": "",
+      "readySelector": "",
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": 0,
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.2,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "LeaveModulePage",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "https://employeeportal.sankeysolutions.com/leave",
+      "referenceUrl": "",
+      "selectors": ["body"],
+      "readyEvent": "",
+      "readySelector": "",
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": 0,
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.2,
+      "requireSameDimensions": true
+    }
+    
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["browser"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": ["--no-sandbox"]
+  },
+  "asyncCaptureLimit": 5,
+  "asyncCompareLimit": 50,
+  "debug": true,
+  "debugWindow": false
+}
